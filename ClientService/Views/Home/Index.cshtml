@@ -1,0 +1,11 @@
+﻿@using PipelineService.Models;
+
+<div>
+    @foreach (Default def in ViewBag.Results)
+    {
+        <div style="margin: .5em; padding: .25em">
+            <div>@def.message</div>
+            <div>@def.randomNumber</div>
+        </div>
+    }
+</div>
