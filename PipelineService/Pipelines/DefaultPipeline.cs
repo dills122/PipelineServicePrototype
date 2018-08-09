@@ -63,8 +63,12 @@ namespace PipelineService.Pipelines
             await WaitForResults();
             var results = await GetResults();
             return results;
+        }
 
-            throw new NotImplementedException();
+        public void ProcessAndForget(List<Default> ts)
+        {
+            //Fire and forget
+            Task.Factory.StartNew(() => ProcessWaitForResults(ts));
         }
     }
 }

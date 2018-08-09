@@ -12,5 +12,6 @@ namespace PipelineService.Interfaces
         Task<List<T>> GetResults();
         void Complete();
         Task<List<T>> ProcessWaitForResults(List<T> ts);
+        void ProcessAndForget(List<T> ts);
     }
 }
