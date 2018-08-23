@@ -14,10 +14,13 @@ namespace ClientService.Controllers
     public class HomeController : Controller
     {
         private IPipelineAlloc<DefaultPipeline> _pipelineAlloc;
+        private IPipelineAlloc<AdvancedDefaultPipeline> _advPipelineAlloc;
+        //private IPipelineAlloc<>
         private IPipeline<Default> _pipeline;
-        public HomeController(IPipelineAlloc<DefaultPipeline> pipelineAlloc)
+        public HomeController(IPipelineAlloc<DefaultPipeline> pipelineAlloc, IPipelineAlloc<AdvancedDefaultPipeline> advPipelineAlloc)
         {
             _pipelineAlloc = pipelineAlloc;
+            _advPipelineAlloc = advPipelineAlloc;
             _pipeline = _pipelineAlloc.RetrievePipeline().Result;
 
         }
@@ -30,6 +33,13 @@ namespace ClientService.Controllers
             await _pipeline.WaitForResults();
             var results = await _pipeline.GetResults();
             ViewBag.Results = results;
+
+            _pipeline = await _pipelineAlloc.RetrievePipeline();
+            List<Default> inputs = new List<Default>();
+            inputs.Add(new Default("Forget Pipeline", 300));
+            inputs.Add(new Default("Forget Pipeline Two", 300));
+            _pipeline.ProcessAndForget(inputs);
+
             return View();
         }
 
@@ -47,12 +57,28 @@ namespace ClientService.Controllers
 
         public async Task<IActionResult> Contact()
         {
-            IPipeline<Default> localPipeline = _pipelineAlloc.RetrievePipeline().Result;
-            await localPipeline.FillPipeline(new Default("Contact Pipeline", 200));
-            await localPipeline.FillPipeline(new Default("Contact Pipeline Two", 200));
-            localPipeline.Complete();
-            await localPipeline.WaitForResults();
-            var results = await localPipeline.GetResults();
+            //IPipeline<Default> localPipeline = _pipelineAlloc.RetrievePipeline().Result;
+            //await localPipeline.FillPipeline(new Default("Contact Pipeline", 200));
+            //await localPipeline.FillPipeline(new Default("Contact Pipeline Two", 200));
+            //localPipeline.Complete();
+            //await localPipeline.WaitForResults();
+            //var results = await localPipeline.GetResults();
+            //ViewBag.Results = results;
+
+            //IPipeline<Default> localPipelineTwo = _pipelineAlloc.RetrievePipeline().Result;
+            //await localPipelineTwo.FillPipeline(new Default("Contact Pipeline zwei", 200));
+            //await localPipelineTwo.FillPipeline(new Default("Contact Pipeline zwei Two", 200));
+            //localPipelineTwo.Complete();
+            //await localPipelineTwo.WaitForResults();
+            //var resultsTwo = await localPipelineTwo.GetResults();
+
+            IPipeline<string, List<string>> pipeline = await _advPipelineAlloc.RetrievePipeline();
+            List<string> strs = new List<string>();
+            strs.Add("adsfkljasdflkaesadf");
+            strs.Add("erkwqnemnkrqwlasdf");
+            strs.Add("aksldfjaleadsbasedfasdfaadsf");
+
+            var results = await pipeline.ProcessWaitForResults(strs);
             ViewBag.Results = results;
 
             return View();

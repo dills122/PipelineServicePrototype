@@ -14,4 +14,16 @@ namespace PipelineService.Interfaces
         Task<List<T>> ProcessWaitForResults(List<T> ts);
         void ProcessAndForget(List<T> ts);
     }
+
+    public interface IPipeline<T, E> 
+        where T : class
+        where E : class
+    {
+        Task FillPipeline(T t);
+        Task WaitForResults();
+        Task<List<E>> GetResults();
+        void Complete();
+        Task<List<E>> ProcessWaitForResults(List<T> ts);
+        void ProcessAndForget(List<T> ts);
+    }
 }
