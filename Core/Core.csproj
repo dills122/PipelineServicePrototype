@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BusinessLayer\Contracts\" />
+    <Folder Include="BusinessLayer\Responses\" />
+    <Folder Include="DataLayer\Contracts\" />
+    <Folder Include="DataLayer\DataContracts\" />
+    <Folder Include="DataLayer\Mapping\" />
+    <Folder Include="DataLayer\Repositories\" />
+    <Folder Include="EntityLayer\" />
+  </ItemGroup>
+
+</Project>

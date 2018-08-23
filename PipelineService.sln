@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineService", "PipelineService\PipelineService.csproj", "{EE080BB3-F451-4857-AB23-75B23ED723F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineService", "PipelineService\PipelineService.csproj", "{EE080BB3-F451-4857-AB23-75B23ED723F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "ClientService\ClientService.csproj", "{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientService", "ClientService\ClientService.csproj", "{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A8C9E60B-368F-4131-950A-DCC5CBF5E952}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
