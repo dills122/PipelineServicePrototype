@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineService", "Pipeline
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientService", "ClientService\ClientService.csproj", "{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{A8C9E60B-368F-4131-950A-DCC5CBF5E952}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineTests", "PipelineTests\PipelineTests.csproj", "{4F3B6052-8A1E-4360-B3C1-ABF06D04059E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineTests", "PipelineTests\PipelineTests.csproj", "{4F3B6052-8A1E-4360-B3C1-ABF06D04059E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA7E17BC-ECD9-457E-AE9E-AEEB73D941A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8C9E60B-368F-4131-950A-DCC5CBF5E952}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F3B6052-8A1E-4360-B3C1-ABF06D04059E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F3B6052-8A1E-4360-B3C1-ABF06D04059E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F3B6052-8A1E-4360-B3C1-ABF06D04059E}.Release|Any CPU.ActiveCfg = Release|Any CPU
